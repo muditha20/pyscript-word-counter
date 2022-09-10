@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Counter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="main">
+        <div>
+            <p class="head-title">Word counter</p>
+        </div>
+
+        <div class="form-group shadow-textarea">
+            <textarea class="form-control z-depth-1" id="textInput" rows="3" placeholder="Enter your text..."></textarea>
+        </div>
+
+        <div class="child-div">
+            <button id="count" type="button" class="btn btn-outline-success btn-lg " pys-onClick="word_count">Count</button>
+            <button id="clear" type="button" class="btn btn-outline-danger btn-lg" pys-onClick="clear">Clear</button>
+        </div>
+
+        <p id='word-count-p'> 📝 Total words - <span id="word_count"> </span> | 🔡 Total texts - <span id="total_text"> </span></p>
+
+    </div>
+
+    <!--Pyscript script-->
+    <py-script>
+        textInput = Element("textInput")
+        word_count_element = Element("word_count")
+        text_count_element = Element("total_text")
+
+        def clear(*args, **kwargs):
+            textInput.clear()
+            word_count_element.write("0")
+            text_count_element.write("0")
+
+        def word_count(*args, **kwargs):
+            words = len(textInput.value.split())
+            word_count_element.write(words)
+
+            texts = len(textInput.value)
+            text_count_element.write(texts)
+    </py-script>
+
+<!--Back ground effect-->
+    <div class="wrapper">
+        <ul class="bg-bubbles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+</body>
+</html>
