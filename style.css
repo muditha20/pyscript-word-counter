@@ -7,17 +7,19 @@ body{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    background-color: #2b2d42;
+    background-color: #212121;
     padding: 20px;
     margin-top: 5.5%;
     border-radius: 50px;
-    box-shadow: 2px;
+    box-shadow: 3px 3px 5px #1b1a1a, -3px -3px 5px #2b2b2b;
+    
 }
 
 .head-title{
     font-size: 40px;
     font-family:'Courier New', Courier, monospace;
     margin-top: 2.5%;
+
     }
 #textInput{
     width: 60%;
@@ -26,6 +28,15 @@ body{
     height: 55%;
     box-shadow: 2px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #242425;
+    color: rgb(200, 205, 209);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1),
+      inset 2px 2px 6px rgba(25, 25, 25, 0.9);
+
 }
 .child-div {
     width: 80%;
@@ -39,13 +50,19 @@ body{
 
 .btn-outline-success, .btn-outline-danger{
     margin: 50px;
+    box-shadow: 3px 3px 5px #1b1a1a, -3px -3px 5px #2b2b2b;
 
 }
 
 
-#word_count, #word-count-p{
+#word_count, #word-count-p ,#total_text{
 font-size: 25px;
 margin-top: 10px;
+box-shadow: 3px 3px 5px #1b1a1a, -3px -3px 5px #2b2b2b;
+margin-left: 10%;
+margin-right: 10%;
+padding: 0.5%;
+border-radius: 20px;
 }
 
 
