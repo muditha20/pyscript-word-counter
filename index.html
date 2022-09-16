@@ -32,12 +32,12 @@
 
         <div class="results" id='word-count-p'>
             <div class="word-count-div">
-                <p> 📝 Total words <span id="word_count"> </span> </p>
+                <p> 📝 Total words <span id="word_count">0</span> </p>
             </div>
 
 
             <div class="chars-count-div">
-                <p> 🔡 Total texts <span id="total_text"> </span></p>
+                <p> 🔡 Total texts <span id="total_text">0</span></p>
             </div>
         </div>
     </div>
@@ -48,17 +48,18 @@
         word_count_element = Element("word_count")
         text_count_element = Element("total_text")
 
-        def clear(*args, **kwargs):
+        def clear(*args, **kwargs): #clear button
             textInput.clear()
             word_count_element.write("0")
             text_count_element.write("0")
 
-        def word_count(*args, **kwargs):
-            words = len(textInput.value.split())
+        def word_count(*args, **kwargs): #count button
+            words = len(textInput.value.split()) #words count
             word_count_element.write(words)
 
-            texts = len(textInput.value)
-            text_count_element.write(texts)
+            texts = len(textInput.value) #characters count
+            spaces = textInput.value.count(" ") #spaces count
+            text_count_element.write(texts - spaces )
     </py-script>
 
 <!--Back ground effect-->
